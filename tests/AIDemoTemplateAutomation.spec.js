@@ -1,10 +1,10 @@
 const { test, expect } = require('@playwright/test');
-import { LoginPage } from '../pages/LoginPage';
-import { AIPdfPage } from '../pages/AIPdfPage';
-import { MembersPage } from '../pages/MembersPage';
-import { ApiKeyPage } from '../pages/ApiKeyPage';
-import { BillingPage } from '../pages/BillingPage';
-import { Dashboardpage } from '../pages/DashboardPage';
+import { LoginPage } from '../TemplatePages/LoginPage';
+import { AIPdfPage } from '../TemplatePages/AIPdfPage';
+import { MembersPage } from '../TemplatePages/MembersPage';
+import { ApiKeyPage } from '../TemplatePages/ApiKeyPage';
+import { BillingPage } from '../TemplatePages/BillingPage';
+import { Dashboardpage } from '../TemplatePages/DashboardPage';
 
 
 test.beforeEach('Verify log-in operation', async ({ page }) => {
