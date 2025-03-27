@@ -44,6 +44,6 @@ exports.Dashboardpage = class DashboardPage {
     async logoutUser() {
         await this.userProfileIcon.click();
         await this.logout.click();
-        await this.page.waitForTimeout(2000);
+        
     }
 }
