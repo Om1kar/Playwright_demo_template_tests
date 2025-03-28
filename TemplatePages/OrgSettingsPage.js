@@ -1,4 +1,7 @@
+
+
 const path = require('path');
+
 exports.OrgSettingsPage = class OrgSettingsPage {
     constructor(page) {
         this.page = page;
@@ -12,27 +15,27 @@ exports.OrgSettingsPage = class OrgSettingsPage {
         this.cancelDeletion = page.locator("//button[text()='Cancel']");
     }
 
-        async updateOrgDetails(){
-            await this.setting.click();
-            await this.upload.click();
+    async updateOrgDetails() {
+        await this.setting.click();
+        await this.upload.click();
 
 
-            const uploadOrgImage = await this.filetype;
-            const selectImage = path.join(__dirname, 'Files', 'techie.jpg');
-            await uploadOrgImage.setInputFiles(selectImage);
-            await this.page.waitForTimeout(2000);
+        const uploadOrgImage = await this.filetype;
+        const selectImage = path.join(__dirname, 'Files', 'techie.jpg');
+        await uploadOrgImage.setInputFiles(selectImage);
+        await this.page.waitForTimeout(2000);
 
-            await this.orgName.fill('Updated Name');
-            await this.updateName.click();
-            await this.page.waitForTimeout(2000);
-        }
-       
+        await this.orgName.fill('Updated Name');
+        await this.updateName.click();
+        await this.page.waitForTimeout(2000);
+    }
 
-        async deleteOrg(){
-            console.log("Deleting Organization");
-            await this.delete.click();
-            await this.page.waitForTimeout(2000);
-            await this.cancelDeletion.click();
-            await this.page.waitForTimeout(2000);
-        }
+
+    async deleteOrg() {
+        console.log("Deleting Organization");
+        await this.delete.click();
+        await this.page.waitForTimeout(2000);
+        await this.cancelDeletion.click();
+        await this.page.waitForTimeout(2000);
+    }
 }

@@ -44,8 +44,7 @@ exports.AIPdfPage = class AIPdfPage {
                 break;
             }
         }
-
-        await this.page.waitForTimeout(2000);
+       // await this.page.waitForLoadState('networkidle');
         await this.seeHistory.click();
         await this.questionInput.fill('hello');
         await this.sendQuestion.click();
